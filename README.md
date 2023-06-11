@@ -11,7 +11,7 @@ We will create a site where we can mint NFT on Solana. In this project, we will 
 
 Solana is a **super fast** blockchain with **super low** fees. We’ve already covered some of the benefits of this in our Solana Pay and Anchor tutorials. It’s great for NFT collections too because it costs pennies to mint an NFT and not much to launch the collection. None of that gas war nonsense here! And because it’s so fast we’ll be able to quickly show users exactly what they’ve minted :)
 
-**What is NFT?**
+##What is NFT?
 
 Non-Fungible Token (NFT), in its shortest definition, is a **unique digital asset.** It represents many unique digital assets, from collector's items to virtual shoes, from virtual game content to digital properties.
 
@@ -19,9 +19,9 @@ Non-Fungible Token (NFT), in its shortest definition, is a **unique digital ass
 
 Metaplex is the standard for creating NFTs on Solana. Candy Machine is one of the Solana programs written by them. We don’t need to write our own program to create NFTs on Solana, we just use theirs! They also provide a super handy CLI that lets us set up our NFT collection, and a TypeScript SDK to interact with our collection from a web app.
 
-Requirements for the project
+#Requirements for the project
 
-**Install Solana CLI**
+## Install Solana CLI
 
 -If you already have Solana CLI installed you can skip over this!
 
@@ -38,7 +38,7 @@ solana-cli 1.10.31 (src:77a40cd8; feat:4192065167)
 
 Again just make sure your version is no older than mine. You won’t need to change versions during this tutorial, but you can always install the latest version using `solana-install update`
 
-**Generate a Solana keypair**
+## Generate a Solana keypair
 
 -If you already have a Solana keypair locally then you can skip over this!
 
@@ -86,7 +86,7 @@ Signature: 34gtEy4rxXMengtTUgCYCcMnTru6AYpnbFyStCFYFS5QVpcNZ4Y66Vk4mXcf5ALUKzU5F
 
 Now we have some SOL.. on devnet. Unsurprisingly but sadly, that airdrop doesn’t work on mainnet! We’ll be working on devnet for this tutorial though.
 
-**Install Metaplex Sugar CLI**
+## Install Metaplex Sugar CLI
 
 Sugar is the new candy machine CLI from Metaplex. It makes it super straightforward to create and deploy an NFT collection.
 
@@ -101,7 +101,7 @@ sugar-cli 1.1.0
 
 We downloaded everything we need. Lets Build
 
-**Starter code**
+## Starter code
 
 I’ve included some starter code for the frontend app. You can use this repo. 
 
@@ -124,7 +124,7 @@ Browse to [localhost:3000](http://localhost:3000/) and you should see the app ru
 
 ![3](https://github.com/gecginserhat/Solana_NFT/assets/74310970/b828da53-4aa0-45f5-ab78-4e3e3c8c78cd)
 
-**Creating the assets**
+## Creating the assets
 
 This is where we’re going to put the assets for our NFT collection. For each NFT in our collection we will need eg. an image `0.png` and metadata `0.json`. JPG and GIF file types are also supported for the image. Note that the naming must be numeric like this, and there can’t be any gaps starting from 0.
 
@@ -240,7 +240,7 @@ assets/
     collection.json
 ```
 
-**Creating the candy machine**
+## Creating the candy machine
 
 Make sure you’re in the `nft-collection` directory that contains `assets`.
 
@@ -371,13 +371,13 @@ Finally, let’s just check everything looks good with `sugar verify`
 
 You can use that solaneyes link to view the NFTs in your collection and their metadata.
 
-**Mint Page**
+## Mint Page
 
 Now that you’ve deployed your NFT collection we’re going to want to make it available to mint. Metaplex provides a great SDK to get this working.
 
 At a high level, we’re going to allow users to connect a Solana wallet to our app, and then we’re going to let them mint an NFT to that wallet.
 
-## Phantom Wallet Setup
+# Phantom Wallet Setup
 
 We connect a Solana wallet to web apps by using a browser wallet. This is how we connect to and interact with apps. If you already have a Solana wallet set up then feel free to speed through this!
 
@@ -400,7 +400,7 @@ Before we do anything else let’s switch to Devnet. In Phantom, go to Settings 
 
 ![11](https://github.com/gecginserhat/Solana_NFT/assets/74310970/01ce835d-2cbb-4bf7-a6d8-e3222a99124a)
 
-**Get some Devnet SOL**
+## Get some Devnet SOL
 
 
 ![13](https://github.com/gecginserhat/Solana_NFT/assets/74310970/b45ec8f0-6656-4d6a-9ae5-5192525880a1)
@@ -416,7 +416,7 @@ Signature: 3swmtvGTRkRQ9R6fXDNxEY26eprGEm7oaQfJaRbUp9XL7K5Dkw3asqzaQPkWvteJENGEw
 2 SOL
 ```
 
-**Connecting the wallet to our app**
+## Connecting the wallet to our app
 
 Let’s jump back into the `ui` directory (it’s at the same level as `nft-collection`). This is where we’re going to build out a mint UI for our NFT collection.
 
@@ -697,7 +697,7 @@ return (
 ![18](https://github.com/gecginserhat/Solana_NFT/assets/74310970/166915b2-3df3-4636-93e9-35bb216a5955)
 
 
-**Mint button**
+## Mint button
 
 The `findByAddress` function we called above is not creating a transaction, it’s just reading data from the blockchain. By contrast, our `mint` button will be creating a transaction since it’s updating data on the blockchain. The user is sending SOL and receiving an NFT. Ownership of NFTs is tracked on-chain.
 
@@ -971,7 +971,7 @@ Hopefully, this is quite straightforward! We have new state `mintedNft`, and aft
 
 And of course you can double check it’s the same one in your wallet.
 
-**Fetching NFTs the user minted**
+## Fetching NFTs the user minted
 
 Let’s update `pages/holders.tsx` to fetch NFTs for the connected user:
 
