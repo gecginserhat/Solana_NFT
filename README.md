@@ -5,7 +5,8 @@
 So Let's start
 We will create a site where we can mint NFT on Solana. In this project, we will use Metaplex and Candy Machine. This way you can earn Millions of Dollars by developing from NFTs.
 
-References: https://www.soldev.app/course/nfts-with-metaplex
+### References: 
+https://www.soldev.app/course/nfts-with-metaplex
 
 https://www.youtube.com/watch?v=dpZ98NUg_W0&t=563s
 
