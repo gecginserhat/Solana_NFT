@@ -1,11 +1,11 @@
 # Solana NFT Collection Tutorial
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f7d59c07-f21b-4cd8-a7d1-816a11671bd0/Untitled.png)
+![1](https://github.com/gecginserhat/Solana_NFT/assets/74310970/32ddb67f-6455-4d81-89f4-ba2b5174312c)
 
 So Let's start
 We will create a site where we can mint NFT on Solana. In this project, we will use Metaplex and Candy Machine. This way you can earn Millions of Dollars by developing from NFTs.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f303587a-20bc-4ccc-81c4-da9b1c8cf001/Untitled.png)
+![2](https://github.com/gecginserhat/Solana_NFT/assets/74310970/c6d545a2-aae9-41d3-8cf8-e7d6f7ef8545)
 
 ## About Solana
 
@@ -121,7 +121,8 @@ $ npm run dev
 
 Browse to [localhost:3000](http://localhost:3000/) and you should see the app running with a pretty empty looking page:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eeb455c3-cbd0-4e46-a130-db6f524d004d/Untitled.png)
+
+![3](https://github.com/gecginserhat/Solana_NFT/assets/74310970/b828da53-4aa0-45f5-ab78-4e3e3c8c78cd)
 
 **Creating the assets**
 
@@ -196,7 +197,8 @@ Finally, we’re doing to add a `collection` image and JSON file. This will desc
 
 Select a nice image to represent your collection as a whole. Here’s mine:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9fe64f2d-4d85-4bbb-b043-fc33bc8d71b3/Untitled.png)
+
+![4](https://github.com/gecginserhat/Solana_NFT/assets/74310970/c8079138-bd2f-4897-8e99-cdf5f63f33f0)
 
 Save it as `collection.jpg` (or other image type)
 
@@ -243,8 +245,8 @@ assets/
 Make sure you’re in the `nft-collection` directory that contains `assets`.
 
 First we’ll run `sugar create-config` which will walk us through creating a configuration file describing the settings for our NFT collection. It’ll ask us a number of questions as it runs.
+![5](https://github.com/gecginserhat/Solana_NFT/assets/74310970/7e36b30c-7657-4f22-aeb7-d6eee531ca9e)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d9b41917-9d65-43c6-9c1a-10e1c37d4cf8/Untitled.png)
 
 Users will pay SOL to mint an NFT from our collection. You can choose any price, but use something quite small for this just to avoid having to use too much devnet SOL when testing. Decimals are fine, and you can also use 0 for a free mint.
 
@@ -329,13 +331,15 @@ You can use the update authority to update NFTs later. For some use cases this i
 
 Similarly, if your NFTs are mutable then they can be updated in the future. Again Metaplex recommend we do this, so hit `y` to answer yes and continue
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/501d6599-b8f1-4198-a87c-5fff25731256/Untitled.png)
+
+![6](https://github.com/gecginserhat/Solana_NFT/assets/74310970/3c1d4c94-7273-443a-8ddf-7dbe459497d1)
 
 This will have created a new file `nft-collection/config.json` with all our responses. It’s a lot easier than writing that file ourselves! There’s also a `sugar.log` file that is just for debugging, you shouldn’t need to worry about that.
 
 Now let’s upload our assets to Bundlr by running `sugar upload`:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ba244d73-1c62-4da2-bdac-78f952e066ca/Untitled.png)
+
+![7](https://github.com/gecginserhat/Solana_NFT/assets/74310970/197a7d37-24e2-4631-a551-4ccab19987dc)
 
 It uploads all 6 asset pairs, the 5 NFTs, and the collection one. We’ve paid for this with devnet SOL, it cost 0.00024467 to upload all our assets to Arweave.
 
@@ -356,11 +360,14 @@ Those Arweave links have my uploaded `collection.jpg` and `collection.json`! The
 
 Now let’s deploy the candy machine with `sugar deploy`
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ecc57171-a6c5-4287-bb7b-09c56a857792/Untitled.png)
+
+![8](https://github.com/gecginserhat/Solana_NFT/assets/74310970/98fe0228-b1cd-41cc-bbbc-e8218b880726)
 
 Finally, let’s just check everything looks good with `sugar verify`
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4455cc8a-4ab3-4b2d-b128-3c79b6d89404/Untitled.png)
+
+![9](https://github.com/gecginserhat/Solana_NFT/assets/74310970/90ff066a-1954-4098-be26-2cc9f43cfb61)
+
 
 You can use that solaneyes link to view the NFTs in your collection and their metadata.
 
@@ -378,7 +385,9 @@ The most popular browser wallet is called Phantom, and you can download it from 
 
 When Phantom first launches you’ll have the option to create a new wallet or import an existing one:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b2a7949e-2d32-4454-b908-faa2b83addef/Untitled.png)
+![10](https://github.com/gecginserhat/Solana_NFT/assets/74310970/ff390cec-410a-462a-ad82-2b18867bf6b7)
+
+
 
 Click “Create a new wallet” if this is your first time with a browser wallet. We won’t use the same account that we used to create the NFTs, we can use a different one to mint them. You’ll be asked to create a password, this is for the Phantom extension only.
 
@@ -388,11 +397,13 @@ Once you’re done with the setup you’ll be able to see your wallet in Phantom
 
 Before we do anything else let’s switch to Devnet. In Phantom, go to Settings (gear icon in the bottom right), choose “Change Network” and select “Devnet”.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b752436c-3d5f-45a0-a3a1-f8df181feabf/Untitled.png)
+
+![11](https://github.com/gecginserhat/Solana_NFT/assets/74310970/01ce835d-2cbb-4bf7-a6d8-e3222a99124a)
 
 **Get some Devnet SOL**
 
-![1221.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39b9b89a-4448-472c-bfc9-0c4561804654/1221.jpg)
+
+![13](https://github.com/gecginserhat/Solana_NFT/assets/74310970/b45ec8f0-6656-4d6a-9ae5-5192525880a1)
 
 Now jump back into your terminal and airdrop to that address. Here’s how it looks:
 
@@ -411,7 +422,8 @@ Let’s jump back into the `ui` directory (it’s at the same level as `nft-coll
 
 If you haven’t already, install the dependencies (`npm install`) and run the app (`npm run dev`). It’ll be running on [localhost:3000](http://localhost:3000/)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e30aad47-b2be-44f5-81fd-f53cdc9eb7c9/Untitled.png)
+
+![14](https://github.com/gecginserhat/Solana_NFT/assets/74310970/d5b937b6-0383-40db-be9b-56c5e02df278)
 
 It’s a pretty straightforward app!
 
@@ -502,11 +514,13 @@ export default function Navbar() {
 
 All we need to do is add `<WalletMultiButton />` from the `wallet-adapter-react-ui` library. The app should look like this now:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8edf0f5f-28f9-41fe-a5d7-93f523c81137/Untitled.png)
+
+![15](https://github.com/gecginserhat/Solana_NFT/assets/74310970/ecefeacd-5ee1-4462-92db-0ed9264252c1)
 
 And if you click that Select Wallet button you should get a modal to choose your wallet, and then connect:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ea829bd-3d38-48d5-8d7d-308646a1f677/Untitled.png)
+
+![16](https://github.com/gecginserhat/Solana_NFT/assets/74310970/0da40e65-b47e-4dd7-af4e-d5248a35c6fd)
 
 And now users can connect to our app!
 
@@ -644,7 +658,8 @@ Just a React `useEffect` hook - when the page loads it’ll call that `fetchCand
 
 Now if you refresh the page you should see the fetched candy machine logged:
 
-https://gcyrkvfwpvlwjrrklxnh.supabase.co/storage/v1/object/public/tutorials/635521f0-9132-43ab-9c17-dfc8a738878d/tutorial_EtLoO1lRU1Bo-2Yyoow78
+<img width="1000" alt="17" src="https://github.com/gecginserhat/Solana_NFT/assets/74310970/a3e61b0a-a1b1-4fd8-9577-5f85a18e506f">
+
 
 At this point, we have access to that whole object in our UI. There are a few fields that look like they’d be useful to display: the symbol, itemsMinted, and itemsAvailable for example.
 
@@ -679,7 +694,8 @@ return (
 )
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cf1e950e-6f79-497c-8d6b-fd0fcdf63bfd/Untitled.png)
+![18](https://github.com/gecginserhat/Solana_NFT/assets/74310970/166915b2-3df3-4636-93e9-35bb216a5955)
+
 
 **Mint button**
 
@@ -794,23 +810,28 @@ export default function Home() {
 
 Okay so if you refresh the page now you should be able to click on your mint button and see a wallet transaction:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/32237fb2-206c-4bc6-939a-809fd9766553/Untitled.png)
+![19](https://github.com/gecginserhat/Solana_NFT/assets/74310970/751978b8-b028-4c4a-8fd5-9fb68eb1e800)
+
 
 If you approve it then the UI should quickly update to show an NFT has been minted:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/38951adf-a291-4092-98f0-7761924f736b/Untitled.png)
+![20](https://github.com/gecginserhat/Solana_NFT/assets/74310970/25ad956a-9de3-4711-9d7c-569e193fe67a)
+
 
 And in the console you should see that minted NFT:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4862a92f-32b4-4d00-b5b1-d1b337707661/Untitled.png)
+![21](https://github.com/gecginserhat/Solana_NFT/assets/74310970/b24c1fc9-abab-45c7-8403-84d705a178dc)
+
 
 Just open your wallet and look for the NFTs, in Phantom it’s the second tab. You should be able to see the one you just minted!
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0e8fde3-429f-4fbe-bba2-f944ce2baeea/Untitled.png)
+![22](https://github.com/gecginserhat/Solana_NFT/assets/74310970/0ac9b8b0-bc3c-4130-98f1-b9271a374655)
+
 
 Most wallets will also give a way to view the wallet in a blockchain explorer, which lets you see exactly what’s stored on-chain for that NFT. In Phantom, there’s an option to open in Solscan. If you change your preferred explorer in settings it’ll use that one instead - I like Solana Explorer best for NFTs because it shows a bit more information.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/49d31172-0510-4c4e-bc14-d3cfa8e729fe/Untitled.png)
+![23](https://github.com/gecginserhat/Solana_NFT/assets/74310970/fd5895f4-7edb-43a8-8820-e307155ab4c5)
+
 
 **If you mint all your NFTs**
 
@@ -824,7 +845,8 @@ Remember to update the candy machine and collection IDs in `ui/lib/constants.ts`
 
 If you take a closer look at that console log message after an NFT is minted, you’ll see that it includes an `nft` field which has all the details about the specific NFT we minted:
 
-https://gcyrkvfwpvlwjrrklxnh.supabase.co/storage/v1/object/public/tutorials/635521f0-9132-43ab-9c17-dfc8a738878d/tutorial_g1JAu3AEI9i9YbsKRlQXX
+<img width="1000" alt="24" src="https://github.com/gecginserhat/Solana_NFT/assets/74310970/7a094327-6506-43e5-8630-a5bafb02cff3">
+
 
 It’d be pretty cool if our app showed them the NFT they minted right away, so they don’t need to go to their wallet to look at it. Let’s add that!
 
@@ -944,7 +966,8 @@ export default function Home() {
 
 Hopefully, this is quite straightforward! We have new state `mintedNft`, and after minting we set it to `mintOutput.nft`, which is of type `NftWithToken`. When it’s set we just display the NFT using that `NftDisplay` component. Here’s how it looks:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ad62ec81-dbb0-40db-99ad-f8672b2cc820/Untitled.png)
+
+![25](https://github.com/gecginserhat/Solana_NFT/assets/74310970/5a918b89-d3bc-4126-aa93-886b74368fe6)
 
 And of course you can double check it’s the same one in your wallet.
 
@@ -1033,7 +1056,8 @@ We’re using the `findAllByOwner` function, which takes the owner public key as
 
 So to filter to our collection we can use the **collection** field. Remember how we added that `collection.jpg` and `collection.json` when we were creating our assets? That’s a verified collection that all our NFTs are going to be linked to. We can see this on the explorer page for any of our NFTs:
 
-https://gcyrkvfwpvlwjrrklxnh.supabase.co/storage/v1/object/public/tutorials/635521f0-9132-43ab-9c17-dfc8a738878d/tutorial_QIkMba6Dli1n4ACrhlrUD
+<img width="1000" alt="26" src="https://github.com/gecginserhat/Solana_NFT/assets/74310970/9be02022-7640-4c9d-b1e7-6a5b3219e6e6">
+
 
 This is our collection image as an NFT! The **Verified Collection Address** field shows that the NFT in our wallet is part of our collection. Also note that this Address should match the **collection mint ID** that sugar output for you. Super important: not the candy machine ID! We put this in `lib/constants.ts` earlier. Now we can compare it to the collection stored for each NFT to see if they’re a part of our collection.
 
@@ -1061,7 +1085,8 @@ This is just a `useEffect` hook to get the user NFTs. It’ll re-run whenever th
 
 Okay so now if we load our `/holders` page and connect a wallet that has minted some of our NFTs we should see some data logged:
 
-https://gcyrkvfwpvlwjrrklxnh.supabase.co/storage/v1/object/public/tutorials/635521f0-9132-43ab-9c17-dfc8a738878d/tutorial_ECB-ENCGmNOwG7Mqz_W_H
+<img width="1000" alt="27" src="https://github.com/gecginserhat/Solana_NFT/assets/74310970/45a70a4b-fe6d-47bc-939c-0b6c36f206db">
+
 
 It looks a little bit like the response we got back from our mint, with one quite big difference: `json` is null, and `jsonLoaded` is false. Remember that we’re using that `json` field to display NFTs, without it we don’t have the attributes or the image!
 
@@ -1198,7 +1223,8 @@ export default function Holders() {
 
 We can pass a single NFT to `nfts.load()` to have its JSON loaded. Each of these is an independent task, so we use `Promise.all` to load all of them. Now if we refresh the page we should see the JSON loaded:
 
-https://gcyrkvfwpvlwjrrklxnh.supabase.co/storage/v1/object/public/tutorials/635521f0-9132-43ab-9c17-dfc8a738878d/tutorial_1tn9AZycj0uuE1WbLoW5Q
+<img width="1000" alt="28" src="https://github.com/gecginserhat/Solana_NFT/assets/74310970/0094805e-df94-4768-857e-cdf2c58c5b14">
+
 
 ## Displaying their NFTs
 
@@ -1344,11 +1370,13 @@ Pretty straightforward - we’re just checking whether or not there are any user
 
 So now our page looks like this when I’m logged in:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8babff41-09b5-4543-ace7-d574087e5a1a/Untitled.png)
+
+![29](https://github.com/gecginserhat/Solana_NFT/assets/74310970/6ca7dd26-7a47-4316-88ee-44f20d4f8295)
 
 And when I log out…
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e01adce6-589c-4ddb-9911-75d6a4529e89/Untitled.png)
+![30](https://github.com/gecginserhat/Solana_NFT/assets/74310970/b4db2c07-d602-4e84-9bef-f4fd2d22551d)
+
 
 We’re done! Users can come to our site, mint our NFTs, and view their minted NFTs - and whatever else we want to show. Congrats!
 
